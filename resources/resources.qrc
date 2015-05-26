@@ -1,0 +1,33 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/Board.qml</file>
+        <file>qml/Card.qml</file>
+        <file>qml/Card2.qml</file>
+        <file>qml/Card3.qml</file>
+        <file>qml/Card4.qml</file>
+        <file>qml/Card5.qml</file>
+        <file>qml/Card6.qml</file>
+        <file>qml/Card7.qml</file>
+        <file>qml/Card8.qml</file>
+        <file>qml/Card9.qml</file>
+        <file>qml/Card10.qml</file>
+        <file>qml/CardA.qml</file>
+        <file>qml/CardContent.qml</file>
+        <file>qml/CardLetter.qml</file>
+        <file>qml/Cover.qml</file>
+        <file>qml/Deck.qml</file>
+        <file>qml/Ecusson.qml</file>
+        <file>qml/main.qml</file>
+        <file>qml/MainForm.ui.qml</file>
+        <file>qml/Stack.qml</file>
+        <file>img/clubs.jpg</file>
+        <file>img/clubs.svg</file>
+        <file>img/diamonds.jpg</file>
+        <file>img/diamonds.svg</file>
+        <file>img/hearts.jpg</file>
+        <file>img/hearts.svg</file>
+        <file>img/spades.jpg</file>
+        <file>img/spades.svg</file>
+        <file>img/turbo.jpg</file>
+    </qresource>
+</RCC>
