@@ -3,6 +3,7 @@ import QtQuick 2.0
 Rectangle {
     property string theme: "qrc:/img/turbo.jpg"
     property var cardModel
+    property string name
     property bool hasDrawn: false
     property bool inBattle: false
     property bool firstBattleCard: false
@@ -24,7 +25,7 @@ Rectangle {
     Deck    {
         id: deckView
         theme: theme
-        height: parent.height / 2.5
+        height: (parent.height / 2) - 20
         cardWidth: height / 1.414
         width: cardWidth + 200
         enabled: !hasDrawn || inBattle
@@ -53,7 +54,7 @@ Rectangle {
     }
     Stack   {
         id: stack
-        height: parent.height / 2.5
+        height: (parent.height / 2) - 20
         cardWidth: height / 1.414
         width: cardWidth + 200
         anchors {
@@ -64,6 +65,7 @@ Rectangle {
     }
 
     Text    {
+        id: cardsCount
         anchors {
             verticalCenter: deckView.verticalCenter
             left: deckView.right
@@ -73,14 +75,32 @@ Rectangle {
     }
 
     Text    {
+        id: playerBox
+        visible: true
+        color: "black"
+        anchors {
+            bottom: cardsCount.top
+            bottomMargin: 20
+            left: deckView.right
+            leftMargin: 20
+        }
+        font    {
+            pointSize: 20
+
+        }
+
+        text: name
+    }
+    Text    {
         id: messageBox
         visible: true
         opacity: 0
         color: "red"
         anchors {
-            verticalCenter: deckView.verticalCenter
-            right: deckView.left
-            rightMargin: 20
+            bottom: cardsCount.top
+            bottomMargin: 20
+            left: playerBox.right
+            leftMargin: 20
         }
         font    {
             pointSize: 20

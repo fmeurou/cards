@@ -1,7 +1,7 @@
 import QtQuick 2.0
 
 Rectangle {
-    property string theme: "qrc:/img/turbo.jpg"
+    property string theme: "qrc:/img/arabesque.jpg"
     radius: 10
     border  {
         width: 1

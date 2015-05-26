@@ -26,6 +26,7 @@ ApplicationWindow {
 
     Board   {
         id: player1
+        name: qsTr("player 1")
         height: parent.height / 2
         width: parent.width
         rotation: 180
@@ -49,6 +50,7 @@ ApplicationWindow {
 
     Board   {
         id: player2
+        name: qsTr("player 2")
         height: parent.height / 2
         width: parent.width
         cardModel: player2Deck
@@ -75,7 +77,8 @@ ApplicationWindow {
         id: restartButton
         height: parent.height / 2
         width: 50
-        color: "#e7e7e7"
+        radius: 5
+        color: "#185E9A"
         anchors {
             right: parent.right
             verticalCenter: parent.verticalCenter
@@ -86,6 +89,11 @@ ApplicationWindow {
             verticalAlignment: Text.AlignVCenter
             fontSizeMode: Text.Fit
             text: "restart"
+            color: "#ffffff"
+            font    {
+                pointSize: 99
+            }
+
             rotation: 270
         }
         MouseArea   {
