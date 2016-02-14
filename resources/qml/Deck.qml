@@ -5,11 +5,12 @@ Rectangle   {
     property string theme
     property var deckModel
     property int cardWidth: 100
+    property int cardShift: 2
     signal popModel(var card)
     enabled: deckModel.count > 0
 
     GridView    {
-        cellWidth: 2
+        cellWidth: cardShift
         cellHeight: parent.height
         width: parent.width
         height: parent.height

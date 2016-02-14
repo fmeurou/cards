@@ -2,9 +2,14 @@ import QtQuick 2.0
 
 Rectangle {
     id: stack
+
     property int cardWidth: 0
+    property int cardShift: 15
     signal addCard(var card, bool flipped, bool clear)
     signal clearStack()
+
+    width: cardWidth + cardStackModel.count * cardShift
+
     ListModel   {
         id: cardStackModel
     }
@@ -17,7 +22,7 @@ Rectangle {
         clip: true
         width: parent.width
         height: parent.height
-        cellWidth: 15
+        cellWidth: cardShift
         cellHeight: parent.height
         delegate: Card  {
             width: cardWidth

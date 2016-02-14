@@ -27,7 +27,8 @@ Rectangle {
         theme: theme
         height: (parent.height / 2) - 20
         cardWidth: height / 1.414
-        width: cardWidth + 200
+        cardShift: 2
+        width: cardWidth + cardModel.count * deckView.cardShift
         enabled: !hasDrawn || inBattle
         anchors {
             bottom: parent.bottom
@@ -56,11 +57,11 @@ Rectangle {
         id: stack
         height: (parent.height / 2) - 20
         cardWidth: height / 1.414
-        width: cardWidth + 200
+        cardShift: 15
         anchors {
             top: parent.top
             topMargin: 10
-            horizontalCenter: parent.horizontalCenter
+            horizontalCenter: deckView.horizontalCenter
         }
     }
 
@@ -69,7 +70,7 @@ Rectangle {
         anchors {
             verticalCenter: deckView.verticalCenter
             left: deckView.right
-            leftMargin: 20
+            leftMargin: 5
         }
         text: cardModel.count + " cards"
     }
@@ -82,7 +83,7 @@ Rectangle {
             bottom: cardsCount.top
             bottomMargin: 20
             left: deckView.right
-            leftMargin: 20
+            leftMargin: 5
         }
         font    {
             pointSize: 20
